@@ -1,357 +1,852 @@
-<div data-v-5e9078c0=""><h1 data-v-5e9078c0="">
-      Top 142 JavaScript interview
-      questions and answers in 2021.
-    </h1> <p data-v-5e9078c0="">
-      You can check all
-      142
-      JavaScript interview questions here 👉
-      https://devinterview.io/dev/javascript-interview-questions
-    </p> <br data-v-5e9078c0=""> <br data-v-5e9078c0=""> <div data-v-5e9078c0="" class="unit"><div><h2>🔹 1. What is the object type?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <code>object</code> type refers to a compound value where you can set properties (named locations) that each hold their own values of any type. </p><pre><code><span class="token cVar">var</span> obj <span class="token cBase">=</span> <span class="token cBase">{</span>
-	a<span class="token cBase">:</span> <span class="token cString">"hello world"</span><span class="token cBase">,</span> <span class="token cComment">// property</span>
-	b<span class="token cBase">:</span> <span class="token cNum">42</span><span class="token cBase">,</span>
-	c<span class="token cBase">:</span> <span class="token cBool">true</span>
-<span class="token cBase">}</span><span class="token cBase">;</span>
+# 100 Common JavaScript Interview Questions
 
-obj<span class="token cBase">.</span>a<span class="token cBase">;</span>		<span class="token cComment">// "hello world", accessed with doted notation</span>
-obj<span class="token cBase">.</span>b<span class="token cBase">;</span>		<span class="token cComment">// 42</span>
-obj<span class="token cBase">.</span>c<span class="token cBase">;</span>		<span class="token cComment">// true</span>
+<div>
+<p align="center">
+<a href="https://devinterview.io/questions/web-and-mobile-development/">
+<img src="https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/github-blog-img%2Fweb-and-mobile-development-github-img.jpg?alt=media&token=1b5eeecc-c9fb-49f5-9e03-50cf2e309555" alt="web-and-mobile-development" width="100%">
+</a>
+</p>
 
-obj<span class="token cBase">[</span><span class="token cString">"a"</span><span class="token cBase">]</span><span class="token cBase">;</span>	<span class="token cComment">// "hello world", accessed with bracket notation</span>
-obj<span class="token cBase">[</span><span class="token cString">"b"</span><span class="token cBase">]</span><span class="token cBase">;</span>	<span class="token cComment">// 42</span>
-obj<span class="token cBase">[</span><span class="token cString">"c"</span><span class="token cBase">]</span><span class="token cBase">;</span>	<span class="token cComment">// true</span></code></pre><p>Bracket notation is also useful if you want to access a property/key but the name is stored in another variable, such as:</p><pre><code><span class="token cVar">var</span> obj <span class="token cBase">=</span> <span class="token cBase">{</span>
-	a<span class="token cBase">:</span> <span class="token cString">"hello world"</span><span class="token cBase">,</span>
-	b<span class="token cBase">:</span> <span class="token cNum">42</span>
-<span class="token cBase">}</span><span class="token cBase">;</span>
+#### You can also find all 100 answers here 👉 [Devinterview.io - JavaScript](https://devinterview.io/questions/web-and-mobile-development/javascript-interview-questions)
 
-<span class="token cVar">var</span> b <span class="token cBase">=</span> <span class="token cString">"a"</span><span class="token cBase">;</span>
+<br>
 
-obj<span class="token cBase">[</span>b<span class="token cBase">]</span><span class="token cBase">;</span>			<span class="token cComment">// "hello world"</span>
-obj<span class="token cBase">[</span><span class="token cString">"b"</span><span class="token cBase">]</span><span class="token cBase">;</span>		<span class="token cComment">// 42</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="What is the `object` type? Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 2. Explain arrays in JavaScript</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>An <code>array</code> is an object that holds values (of any type) not particularly in named properties/keys, but rather in numerically indexed positions:</p><pre><code><span class="token cVar">var</span> arr <span class="token cBase">=</span> <span class="token cBase">[</span>
-	<span class="token cString">"hello world"</span><span class="token cBase">,</span>
-	<span class="token cNum">42</span><span class="token cBase">,</span>
-	<span class="token cBool">true</span>
-<span class="token cBase">]</span><span class="token cBase">;</span>
+## 1. What are the _data types_ present in JavaScript?
 
-arr<span class="token cBase">[</span><span class="token cNum">0</span><span class="token cBase">]</span><span class="token cBase">;</span>			<span class="token cComment">// "hello world"</span>
-arr<span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">]</span><span class="token cBase">;</span>			<span class="token cComment">// 42</span>
-arr<span class="token cBase">[</span><span class="token cNum">2</span><span class="token cBase">]</span><span class="token cBase">;</span>			<span class="token cComment">// true</span>
-arr<span class="token cBase">.</span>length<span class="token cBase">;</span>		<span class="token cComment">// 3</span>
+JavaScript has **primitive** and **composite** data types.
 
-<span class="token cVar">typeof</span> arr<span class="token cBase">;</span>		<span class="token cComment">// "object"</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="Explain arrays in JavaScript Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 3. What is typeof operator?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>JavaScript provides a <code>typeof</code> operator that can examine a value and tell you what type it is:</p><pre><code><span class="token cVar">var</span> a<span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "undefined"</span>
+### Primitive Data Types
 
-a <span class="token cBase">=</span> <span class="token cString">"hello world"</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "string"</span>
+- **Boolean**: Represents logical values of **true** or **false**.
+- **Null**: Denotes the lack of a value.
 
-a <span class="token cBase">=</span> <span class="token cNum">42</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "number"</span>
+- **Undefined**: Indicates a variable that has been declared but has not been assigned a value.
 
-a <span class="token cBase">=</span> <span class="token cBool">true</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "boolean"</span>
+- **Number**: Represents numeric values, including integers and floats.
 
-a <span class="token cBase">=</span> <span class="token cVar">null</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "object" -- weird, bug</span>
+- **BigInt**: Allows for representation of integers with arbitrary precision.
 
-a <span class="token cBase">=</span> <span class="token cVar">undefined</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "undefined"</span>
+- **String**: Encapsulates sequences of characters.
 
-a <span class="token cBase">=</span> <span class="token cBase">{</span> b<span class="token cBase">:</span> <span class="token cString">"c"</span> <span class="token cBase">}</span><span class="token cBase">;</span>
-<span class="token cVar">typeof</span> a<span class="token cBase">;</span>				<span class="token cComment">// "object"</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="What is `typeof` operator? Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 4. Explain equality in JavaScript</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>JavaScript has both strict and type–converting comparisons: </p><ul><li><strong>Strict comparison (e.g., ===)</strong> checks for value equality without allowing <em>coercion</em></li><li><strong>Abstract comparison (e.g. ==)</strong> checks for value equality with <em>coercion</em> allowed</li></ul><pre><code><span class="token cVar">var</span> a <span class="token cBase">=</span> <span class="token cString">"42"</span><span class="token cBase">;</span>
-<span class="token cVar">var</span> b <span class="token cBase">=</span> <span class="token cNum">42</span><span class="token cBase">;</span>
+- **Symbol** (ES6): Provides a unique, immutable value.
 
-a <span class="token cBase">==</span> b<span class="token cBase">;</span>			<span class="token cComment">// true</span>
-a <span class="token cBase">===</span> b<span class="token cBase">;</span>		<span class="token cComment">// false</span></code></pre><p>Some simple equalityrules:</p><ul><li>If either value (aka side) in a comparison could be the <code>true</code> or <code>false</code> value, avoid <code>==</code> and use <code>===</code>.</li><li>If either value in a comparison could be of these specific values (<code>0</code>, <code>""</code>, or <code>[]</code> -- empty array), avoid <code>==</code> and use <code>===</code>.</li><li>In all other cases, you're safe to use <code>==</code>. Not only is it safe, but in many cases it simplifies your code in a way that improves readability.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="Explain equality in JavaScript Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 5. What is Scope in JavaScript?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>In JavaScript, each function gets its own <em>scope</em>. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's scoped variables.</p><p>A variable name has to be unique within the same scope. A scope can be nested inside another scope. If one scope is nested inside another, code inside the innermost scope can access variables from either scope.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="What is `Scope` in JavaScript? Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 6. Explain Values and Types in JavaScript</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>JavaScript has typed values, not typed variables. The following built-in types are available:</p><ul><li><code>string</code></li><li><code>number</code></li><li><code>boolean</code></li><li><code>null</code> and <code>undefined</code></li><li><code>object</code></li><li><code>symbol</code> (new to ES6)</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="Explain Values and Types in JavaScript Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 7. What is let keyword in JavaScript?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>In addition to creating declarations for variables at the function level, ES6 lets you declare variables to belong to individual blocks (pairs of <code>{ .. }</code>), using the <code>let</code> keyword. </p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch2.md" rel="noreferrer" target="_blank" title="What is `let` keyword in JavaScript? Interview Questions Source To Answer">github.com/getify</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 8. Explain the same-origin policy with regards to JavaScript.</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <strong>same-origin policy</strong> prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="Explain the same-origin policy with regards to JavaScript. Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 9. What is the difference between == and ===?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><code>==</code> is the abstract equality operator while <code>===</code> is the strict equality operator. The <code>==</code> operator will compare for equality after doing any necessary type conversions. The <code>===</code> operator will not do type conversion, so if two values are not the same type <code>===</code> will simply return <code>false</code>. When using <code>==</code>, funky things can happen, such as:</p><pre><code><span class="token cNum">1</span> <span class="token cBase">==</span> <span class="token cString">'1'</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-<span class="token cNum">1</span> <span class="token cBase">==</span> <span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">]</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-<span class="token cNum">1</span> <span class="token cBase">==</span> <span class="token cBool">true</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-<span class="token cNum">0</span> <span class="token cBase">==</span> <span class="token cString">''</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-<span class="token cNum">0</span> <span class="token cBase">==</span> <span class="token cString">'0'</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-<span class="token cNum">0</span> <span class="token cBase">==</span> <span class="token cBool">false</span><span class="token cBase">;</span> <span class="token cComment">// true</span></code></pre><p>My advice is never to use the <code>==</code> operator, except for convenience when comparing against <code>null</code> or <code>undefined</code>, where <code>a == null</code> will return <code>true</code> if <code>a</code> is <code>null</code> or <code>undefined</code>.</p><pre><code><span class="token cVar">var</span> a <span class="token cBase">=</span> <span class="token cVar">null</span><span class="token cBase">;</span>
-console<span class="token cBase">.</span><span class="token cMod">log</span><span class="token cBase">(</span>a <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">// true</span>
-console<span class="token cBase">.</span><span class="token cMod">log</span><span class="token cBase">(</span>a <span class="token cBase">==</span> <span class="token cVar">undefined</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">// true</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="What is the difference between `==` and `===`? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 10. Is there anyway to force using strict mode in Node.js?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>you can place</p><pre><code><span class="token cString">"use strict"</span><span class="token cBase">;</span></code></pre><p>at the top of your file in <strong>node &gt;= 0.10.7</strong>, but if you want your whole app to run in strict (<strong>including external modules</strong>) you can do this</p><pre><code>node --use_strict</code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/9031888/any-way-to-force-strict-mode-in-node" rel="noreferrer" target="_blank" title="Is there anyway to force using strict mode in Node.js? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 11. Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <code>load</code> event fires at the end of the document loading process. At this point, all of the objects in the document are in the DOM, and all the images, scripts, links and sub-frames have finished loading.</p><p>The DOM event <code>DOMContentLoaded</code> will fire after the DOM for the page has been constructed, but do not wait for other resources to finish loading. This is preferred in certain cases when you do not need the full page to be loaded before initializing.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 12. What is strict mode?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><em>Strict Mode</em> is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions.</p><pre><code><span class="token cComment">// Non-strict code...</span>
+### Composite Data Types
 
-<span class="token cBase">(</span><span class="token cVar">function</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">{</span>
-  <span class="token cString">"use strict"</span><span class="token cBase">;</span>
+- **Object**: Represents a set of key-value pairs and is used for more complex data structures.
+- **Function**: A callable object that can be defined using regular function syntax or using the `new Function()` constructor (rarely used).
 
-  <span class="token cComment">// Define your library strictly...</span>
-<span class="token cBase">}</span><span class="token cBase">)</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">;</span>
+### Notable Characteristics
 
-<span class="token cComment">// Non-strict code...</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="What is `strict mode`? Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 13. What's the difference between Host objects and Native objects?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><ul><li><strong>Native objects</strong> are objects that are part of the JavaScript language defined by the ECMAScript specification, such as <code>String</code>, <code>Math</code>, <code>RegExp</code>, <code>Object</code>, <code>Function</code>, etc.</li><li><strong>Host objects</strong> are provided by the runtime environment (browser or Node), such as <code>window</code>, <code>XMLHTTPRequest</code>, etc.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="What's the difference between Host objects and Native objects? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 14. What language constructions do you use for iterating over object properties and array items?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>For objects:</p><ul><li><code>for</code> loops - <code>for (var property in obj) { console.log(property); }</code>. However, this will also iterate through its inherited properties, and you will add an <code>obj.hasOwnProperty(property)</code> check before using it.</li><li><code>Object.keys()</code> - <code>Object.keys(obj).forEach(function (property) { ... })</code>. <code>Object.keys()</code> is a static method that will lists all enumerable properties of the object that you pass it.</li><li><code>Object.getOwnPropertyNames()</code> - <code>Object.getOwnPropertyNames(obj).forEach(function (property) { ... })</code>. <code>Object.getOwnPropertyNames()</code> is a static method that will lists all enumerable and non-enumerable properties of the object that you pass it.</li></ul><p>For arrays:</p><ul><li><code>for</code> loops - <code>for (var i = 0; i &lt; arr.length; i++)</code>. The common pitfall here is that <code>var</code> is in the function scope and not the block scope and most of the time you would want block scoped iterator variable. ES2015 introduces <code>let</code> which has block scope and it is recommended to use that instead. So this becomes: <code>for (let i = 0; i &lt; arr.length; i++)</code>.</li><li><code>forEach</code> - <code>arr.forEach(function (el, index) { ... })</code>. This construct can be more convenient at times because you do not have to use the <code>index</code> if all you need is the array elements. There are also the <code>every</code> and <code>some</code> methods which will allow you to terminate the iteration early.</li></ul><p>Most of the time, I would prefer the <code>.forEach</code> method, but it really depends on what you are trying to do. <code>for</code> loops allow more flexibility, such as prematurely terminate the loop using <code>break</code> or incrementing the iterator more than once per loop.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="What language constructions do you use for iterating over object properties and array items? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 15. What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>Some examples of languages that compile to JavaScript include CoffeeScript, Elm, ClojureScript, PureScript, and TypeScript.</p><p>Advantages:</p><ul><li>Fixes some of the longstanding problems in JavaScript and discourages JavaScript anti-patterns.</li><li>Enables you to write shorter code, by providing some syntactic sugar on top of JavaScript, which I think ES5 lacks, but ES2015 is awesome.</li><li>Static types are awesome (in the case of TypeScript) for large projects that need to be maintained over time.</li></ul><p>Disadvantages:</p><ul><li>Require a build/compile process as browsers only run JavaScript and your code will need to be compiled into JavaScript before being served to browsers.</li><li>Debugging can be a pain if your source maps do not map nicely to your pre-compiled source.</li><li>Most developers are not familiar with these languages and will need to learn it. There's a ramp up cost involved for your team if you use it for your projects.</li><li>Smaller community (depends on the language), which means resources, tutorials, libraries, and tooling would be harder to find.</li><li>IDE/editor support might be lacking.</li><li>These languages will always be behind the latest JavaScript standard.</li><li>Developers should be cognizant of what their code is being compiled to — because that is what would actually be running, and that is what matters in the end.</li></ul><p>Practically, ES2015 has vastly improved JavaScript and made it much nicer to write. I don't really see the need for CoffeeScript these days.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 16. Explain event bubbling and how one may prevent it</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p><strong>Event bubbling</strong> is the concept in which an event triggers at the deepest possible element, and triggers on parent elements in nesting order. As a result, when clicking on a child element one may exhibit the handler of the parent activating.</p><p>One way to prevent event bubbling is using <code>event.stopPropagation()</code> or <code>event.cancelBubble</code> on IE &lt; 9.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/kennymkchan/interview-questions-in-javascript" rel="noreferrer" target="_blank" title="Explain event bubbling and how one may prevent it Interview Questions Source To Answer">https://github.com/kennymkchan</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 17. What does use strict do?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>The <code>use strict</code> literal is entered at the top of a JavaScript program or at the top of a function and it helps you write safer JavaScript code by throwing an error if a global variable is created by mistake. For example, the following program will throw an error:</p><pre><code><span class="token cVar">function</span> <span class="token cMod">doSomething</span><span class="token cBase">(</span><span class="token parameter">val</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cString">"use strict"</span><span class="token cBase">;</span> 
-  x <span class="token cBase">=</span> val <span class="token cBase">+</span> <span class="token cNum">10</span><span class="token cBase">;</span>
-<span class="token cBase">}</span>`</code></pre><p>It will throw an error because <code>x</code> was not defined and it is being set to some value in the global scope, which isn't allowed with <code>use strict</code> The small change below fixes the error being thrown:</p><pre><code><span class="token cVar">function</span> <span class="token cMod">doSomething</span><span class="token cBase">(</span><span class="token parameter">val</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cString">"use strict"</span><span class="token cBase">;</span> 
-  <span class="token cVar">var</span> x <span class="token cBase">=</span> val <span class="token cBase">+</span> <span class="token cNum">10</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://coderbyte.com/algorithm/10-common-javascript-interview-questions" rel="noreferrer" target="_blank" title="What does `use strict` do? Interview Questions Source To Answer">coderbyte.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 18. Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>Every script has access to the global scope, and if everyone uses the global namespace to define their variables, collisions will likely occur. Use the module pattern (IIFEs) to encapsulate your variables within a local namespace.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 19. What is a Polyfill?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>A polyfill is essentially the specific code (or plugin) that would allow you to have some specific functionality that you expect in current or “modern” browsers to also work in other browsers that do not have the support for that functionality built in.</p><ul><li>Polyfills are not part of the HTML5 standard</li><li>Polyfilling is not limited to Javascript</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="http://www.programmerinterview.com/index.php/html5/html5-polyfill/" rel="noreferrer" target="_blank" title="What is a Polyfill? Interview Questions Source To Answer">programmerinterview.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 20. Explain Null and Undefined in JavaScript</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div><div class="AnswerBody"><p>JavaScript (and by extension TypeScript) has two bottom types: <code>null</code> and <code>undefined</code>. They are <em>intended</em> to mean different things:</p><ul><li>Something hasn't been initialized : <code>undefined</code>.</li><li>Something is currently unavailable: <code>null</code>.</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/" rel="noreferrer" target="_blank" title="Explain `Null` and `Undefined` in JavaScript Interview Questions Source To Answer">Stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 21. What's the difference between throw Error('msg') vs throw new Error('msg')?</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><pre><code><span class="token cVar">var</span> err1 <span class="token cBase">=</span> <span class="token cMod">Error</span><span class="token cBase">(</span><span class="token cString">'message'</span><span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cVar">var</span> err2 <span class="token cBase">=</span> <span class="token cVar">new</span> <span class="token class-name">Error</span><span class="token cBase">(</span><span class="token cString">'message'</span><span class="token cBase">)</span><span class="token cBase">;</span></code></pre><p>Which one is correct and why?</p></div></div><div><div class="AnswerBody"><p>Both are fine; the function call <code>Error(…)</code> is equivalent to the object creation expression <code>new Error(…)</code> with the same arguments.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/13294658/throw-errormsg-vs-throw-new-errormsg" rel="noreferrer" target="_blank" title="What's the difference between `throw Error('msg')` vs `throw new Error('msg')`? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 22. Lucky sevens</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Write a function called <code>lucky_sevens</code> which takes an array of integers and returns true if any three consecutive elements sum to 7.</p></div></div><div><div class="AnswerBody"><p>To solve this challenge we'll simply loop through the array starting at the 3rd position, and checking if the number at this index plus the two previous elements sums to 7. We continue doing this as we loop through the entire array. Once we find three elements that sum to 7, we simply return <code>true</code>. If we reach the end of the array without finding elements that sum to 7, we return <code>false</code>.</p><pre><code><span class="token cVar">function</span> <span class="token cMod">lucky_sevens</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  
-  <span class="token cComment">// if less than 3 elements then this challenge is not possible</span>
-  <span class="token cVar">if</span> <span class="token cBase">(</span>arr<span class="token cBase">.</span>length <span class="token cBase">&lt;</span> <span class="token cNum">3</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">return</span> <span class="token cString">"not possible"</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
-  
-  <span class="token cComment">// because we know there are at least 3 elements we can</span>
-  <span class="token cComment">// start the loop at the 3rd element in the array (i=2)</span>
-  <span class="token cComment">// and check it along with the two previous elements (i-1) and (i-2)</span>
-  <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> <span class="token cNum">2</span><span class="token cBase">;</span> i <span class="token cBase">&lt;</span> arr<span class="token cBase">.</span>length<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>arr<span class="token cBase">[</span>i<span class="token cBase">]</span> <span class="token cBase">+</span> arr<span class="token cBase">[</span>i<span class="token cBase">-</span><span class="token cNum">1</span><span class="token cBase">]</span> <span class="token cBase">+</span> arr<span class="token cBase">[</span>i<span class="token cBase">-</span><span class="token cNum">2</span><span class="token cBase">]</span> <span class="token cBase">===</span> <span class="token cNum">7</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-      <span class="token cVar">return</span> <span class="token cBool">true</span><span class="token cBase">;</span> 
-    <span class="token cBase">}</span>
-  <span class="token cBase">}</span>
-  
-  <span class="token cComment">// if loop is finished and no elements summed to 7</span>
-  <span class="token cVar">return</span> <span class="token cBool">false</span><span class="token cBase">;</span>
-  
-<span class="token cBase">}</span>
+- JavaScript is **dynamically-typed**, meaning the data type of a variable can change during the execution of a program.
+- **Data type coercion** can occur, where values are implicitly converted from one type to another in specific contexts, such as during comparisons.
+- Arithmetic operations, particularly when one of the operands is a string, can lead to **implicit type conversions**.
+<br>
 
-<span class="token cMod">lucky_sevens</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cNum">2</span><span class="token cBase">,</span> <span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">5</span><span class="token cBase">,</span> <span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">0</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://coderbyte.com/algorithm/lucky-sevens" rel="noreferrer" target="_blank" title="Lucky sevens Interview Questions Source To Answer">coderbyte.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 23. Simple clock angle</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>You will be given a number <code>N</code> that represents where the minute hand currently is on a clock. Your program should return the angle that is formed by the minute hand and the <code>12</code> o'clock mark on the clock.</p></div></div><div><div class="AnswerBody"><p>If the input is <code>15</code> then your program should return <code>90</code> because a <code>90</code>-degree angle is formed by the minute hand and the <code>12</code> o'clock mark on the clock. We'll solve this challenge by first calculating what angle is created by each minute passing on a clock. Once we calculate this number, we multiply it by the input to determine the final angle. </p><p>A method to solve such problems is to consider the rate of change of the angle in degrees per minute. The hour hand of a normal <code>12-hour</code> analogue clock turns <code>360°</code> in <code>12</code> hours (<code>720</code> minutes) or <code>0.5°</code> per minute. The minute hand rotates through <code>360°</code> in <code>60</code> minutes or <code>6°</code> per minute.</p><pre><code><span class="token cVar">function</span> <span class="token cMod">simpleClockAngle</span><span class="token cBase">(</span><span class="token parameter">num</span><span class="token cBase">)</span> <span class="token cBase">{</span>
+## 2. What is the difference between _null_ and _undefined_?
 
-  <span class="token cComment">// we got 6 because 360/60 = 6</span>
-  <span class="token cComment">// 360 represents the full number of a degrees in a circle and</span>
-  <span class="token cComment">// 60 is the number of minutes on a clock, so dividing these two numbers</span>
-  <span class="token cComment">// gives us the number of degrees for one minute</span>
-  <span class="token cVar">return</span> <span class="token cNum">6</span> <span class="token cBase">*</span> num<span class="token cBase">;</span>
+While both **null** and **undefined** represent "no value" in JavaScript, they are distinct in their roles and origins.
 
-<span class="token cBase">}</span>
+### Origin and Context
 
-<span class="token cMod">simpleClockAngle</span><span class="token cBase">(</span><span class="token cNum">15</span><span class="token cBase">)</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://coderbyte.com/algorithm/stock-maximum-profit" rel="noreferrer" target="_blank" title="Simple clock angle Interview Questions Source To Answer">coderbyte.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 24. Sum of several arrays</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>You will be given an array of several arrays that each contain integers and your goal is to write a function that will sum up all the numbers in all the arrays. For example, if the input is <code>[[3, 2], [1], [4, 12]]</code> then your program should output <code>22</code> because <code>3 + 2 + 1 + 4 + 12 = 22</code>. Solve without and with <code>reduce</code>.</p></div></div><div><div class="AnswerBody"><p>We will solve this challenge by looping through the entire array, and then looping through each inner array adding up all the numbers.</p><pre><code><span class="token cVar">function</span> <span class="token cMod">sum_array</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cComment">// store our final answer</span>
-  <span class="token cVar">var</span> sum <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  <span class="token cComment">// loop through entire array</span>
-  <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> i <span class="token cBase">&lt;</span> arr<span class="token cBase">.</span>length<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cComment">// loop through each inner array</span>
-    <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> j <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> j <span class="token cBase">&lt;</span> arr<span class="token cBase">[</span>i<span class="token cBase">]</span><span class="token cBase">.</span>length<span class="token cBase">;</span> j<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-      <span class="token cComment">// add this number to the current final sum</span>
-      sum <span class="token cBase">+=</span> arr<span class="token cBase">[</span>i<span class="token cBase">]</span><span class="token cBase">[</span>j<span class="token cBase">]</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-  <span class="token cBase">}</span>
-  
-  <span class="token cVar">return</span> sum<span class="token cBase">;</span>
-<span class="token cBase">}</span>
+- **null** usually denotes an intentionally **absent** value, and developers can set a variable to null to signify the absence of an object or a value. For example, if an API call doesn't return data, you might set a variable to null.
 
-<span class="token cMod">sum_array</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cBase">[</span><span class="token cNum">3</span><span class="token cBase">,</span> <span class="token cNum">2</span><span class="token cBase">]</span><span class="token cBase">,</span> <span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">]</span><span class="token cBase">,</span> <span class="token cBase">[</span><span class="token cNum">4</span><span class="token cBase">,</span> <span class="token cNum">12</span><span class="token cBase">]</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span></code></pre><p>With <code>reduce</code>:</p><pre><code><span class="token cVar">function</span> <span class="token cMod">sumArray</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> arr<span class="token cBase">.</span><span class="token cMod">reduce</span><span class="token cBase">(</span><span class="token cBase">(</span><span class="token parameter">t<span class="token cBase">,</span> e</span><span class="token cBase">)</span> <span class="token cBase">=&gt;</span> t<span class="token cBase">.</span><span class="token cMod">concat</span><span class="token cBase">(</span>e<span class="token cBase">)</span><span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">reduce</span><span class="token cBase">(</span><span class="token cBase">(</span><span class="token parameter">t<span class="token cBase">,</span> e</span><span class="token cBase">)</span> <span class="token cBase">=&gt;</span> t <span class="token cBase">+</span> e<span class="token cBase">)</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://coderbyte.com/algorithm/sum-of-several-arrays" rel="noreferrer" target="_blank" title="Sum of several arrays Interview Questions Source To Answer">coderbyte.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 25. Test divisors of three</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>You will be given 2 parameters: a low and high number. Your goal is to print all numbers between low and high, and for each of these numbers print whether or not the number is divisible by 3. If the number is divisible by 3, print the word "div3" directly after the number.</p></div></div><div><div class="AnswerBody"><p>We'll solve this problem by first creating a loop that will print each number from low to high. Once we have the code for that written, we'll add a conditional that will check if the number is evenly divisible by 3 by using the mod operator.</p><pre><code><span class="token cVar">function</span> <span class="token cMod">test_divisors</span><span class="token cBase">(</span><span class="token parameter">low<span class="token cBase">,</span> high</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  
-  <span class="token cComment">// we'll store all numbers and strings within an array</span>
-  <span class="token cComment">// instead of printing directly to the console</span>
-  <span class="token cVar">var</span> output <span class="token cBase">=</span> <span class="token cBase">[</span><span class="token cBase">]</span><span class="token cBase">;</span>
-  
-  <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> low<span class="token cBase">;</span> i <span class="token cBase">&lt;=</span> high<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
+- **undefined** typically indicates a variable that has been declared but not yet been assigned a value, or a property that doesn't exist on an object.
+
+### Variable Initialization and Assignment
+
+- Variables that haven't been assigned a value are `undefined` by default, unless explicitly set to `null`.
+  ```javascript
+  let foo; // undefined
+  let bar = null; // null
+  ```
+
+### Function Arguments
+
+- When a function is called, and the parameter isn't provided or its value is not set, the parameter is `undefined`. 
+- **null** would instead be an explicit value provided as an argument.
+
+### Object Properties
+
+- If you try to access a property on an object that doesn't exist, the result is `undefined`.
+  ```javascript
+  let obj = {};
+  console.log(obj.nonExistentProperty); // undefined
+  ```
+
+- **Null** can be used to clear a property value in an object that was previously set.
+  ```javascript
+  let obj = { prop: 'value' };
+  obj.prop = null;
+  ```
+
+### The Equality Operation
+
+- In JavaScript, **undefined** and **null** are treated as equal when using loose equality (==) but not strict equality (===).
+
+### Use-Cases and Best Practices
+
+- When you initialize a variable and are not ready to assign a meaningful value, it's more common to use **undefined** instead of **null** to indicate that the value isn't there yet.
+- For example, if you declare a user object but don't have their details yet, you might keep it as `undefined`.
+
+### Code Example
+
+Here is the JavaScript code:
+
+```javascript
+let var1;
+let var2 = null;
+
+let object = {
+  a: 1,
+  b: undefined
+};
+
+function test(arg1, arg2) {
+  console.log(arg1);  // undefined: not provided
+  console.log(arg2);  // null: provided as such
+}
+
+function clearProperty(prop) {
+  delete object[prop];
+}
+
+console.log(var1);     // undefined
+console.log(var2);     // null
+console.log(object.a); // 1
+console.log(object.b); // undefined
+console.log(object.c); // undefined
+
+test();               // Both arguments are undefined
+test(1, null);        // arg1 is 1, arg2 is null
+
+clearProperty('b');  // Removes property 'b' from object
+console.log(object.b); // undefined: Property 'b' was removed, not set to null
+```
+<br>
+
+## 3. How does JavaScript handle _type coercion_?
+
+**Type Coercion** in JavaScript refers to the automatic conversion of values from one data type to another.
+
+### Explicit and Implicit Coercion
+
+- **Explicit**: Achieved through methods such as `parseInt()`, `Number()`, and `toString()`.
+- **Implicit**: Automatically occurs during operations or comparisons. For example, combining a string and a number in an addition results in the automatic conversion of the number to a string.
+
+### Common Coercion Scenarios
+
+1. **Arithmetic Operations**: Strings are coerced to numbers.
+    - **Example**: `"5" - 3` evaluates to `2`, as the string is coerced to a number.
     
-    <span class="token cComment">// simply store the current number in the output array</span>
-    output<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span>i<span class="token cBase">)</span><span class="token cBase">;</span>
-    
-    <span class="token cComment">// check if the current number is evenly divisible by 3</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>i <span class="token cBase">%</span> <span class="token cNum">3</span> <span class="token cBase">===</span> <span class="token cNum">0</span><span class="token cBase">)</span> <span class="token cBase">{</span> output<span class="token cBase">.</span><span class="token cMod">push</span><span class="token cBase">(</span><span class="token cString">'div3'</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cBase">}</span>
-    
-  <span class="token cBase">}</span>
+2. **Loose Equality (==)**: Data types are often modified for comparisons.
+    - **Example**: `"4" == 4` is `true` due to string coercion before the comparison.
+
+3. **Conditionals** (if and Ternary Operators): Truthiness or falsiness is determined.
+    - **Example**: `if(1)` evaluates to `true` because `1` coerces to `true`.
+
+4. **Logical Operators**: Non-boolean values are coerced to booleans.
+    - **Example**: `"hello" && 0` evaluates to `0` because the truthy `"hello"` short-circuits the `&&` operation, and `0` coerces to `false`.
+<br>
+
+## 4. Explain the concept of _hoisting_ in JavaScript.
+
+**Hoisting** is a JavaScript mechanism that involves moving variable and function declarations to the top of their containing scope **during the compile phase**. However, the assignments to these variables or the definitions of functions remain in place.
+
+For instance, even though the call to `myFunction` appears before its definition, hoisting ensures that it doesn't cause an error.
+
+### Hoisting in Action
+
+Here's a Code Example:
+
+```javascript
+console.log(myVar); // Undefined
+var myVar = 5;
+
+console.log(myVar); // 5
+
+// The above code is equivalent to the following during the compile phase:
+// var myVar;
+// console.log(myVar);
+// myVar = 5;
+
+console.log(sayHello()); // "Hello, World!"
+function sayHello() {
+    return "Hello, World!";
+}
+
+// The above code is equivalent to the following during the compile phase:
+// function sayHello() {
+//     return "Hello, World!";
+// }
+// console.log(sayHello());
+```
+
+### Why Hoisting Matters
+
+Understanding hoisting can help you prevent certain unexpected behaviors in your code. For example, it can shed light on unexpected "undefined" values that might appear even after a variable is declared and initialized.
+
+#### Global Scope and Hoisting
+
+In the global scope, variables declared with `var` and functions are always hoisted to the top. For example:
+
+```javascript
+// During the compile phase, the following global declarations are hoisted:
+// var globalVar;
+// function globalFunction() {}
+
+console.log(globalVar); // Undefined
+console.log(globalFunction()); // "Hello, Global!"
+var globalVar = "I am global Var!";
+function globalFunction() {
+    return "Hello, Global!";
+}
+```
+
+#### Local Scope and Hoisting
+
+Variables and functions declared in local scopes within functions are also hoisted to the top of their scope.
+
+Here's a Code Example:
+
+```javascript
+function hoistingInLocalScope() {
+    // These local declarations are hoisted during the compile phase:
+    // var localVar;
+    // function localFunction() {}
+
+    console.log(localVar); // Undefined
+    localVar = "I am a local var!";
+    console.log(localFunction()); // "Hello, Local!"
+
+    var localVar;
+    function localFunction() {
+        return "Hello, Local!";
+    }
+}
+```
+
+### Best Practices
+
+To write clean, readable code, it's important to:
+
+- Declare variables at the top of your scripts or functions to avoid hoisting-related pitfalls.
+- Initialize variables before use, **regardless of hoisting**, to ensure predictable behavior.
+
+### ES6 and Hoisting
+
+With the introduction of `let` and `const` in ES6, JavaScript's behavior has adapted. Variables declared using `let` and `const` are still hoisted, but unlike `var`, they are **not initialized**.
+
+Here's an Example:
+
+```javascript
+console.log(myLetVar); // ReferenceError: Cannot access 'myLetVar' before initialization
+let myLetVar = 5;
+```
+
+### Constants and Hoisting
+
+`const` and `let` behave similarly when hoisted, but their difference lies in the fact that `const` must be assigned a value at the time of declaration, whereas `let` does not require an initial value.
+
+Here's an Example:
+
+```javascript
+console.log(myConstVar); // ReferenceError: Cannot access 'myConstVar' before initialization
+const myConstVar = 10;
+
+console.log(myLetVar); // Undefined
+let myLetVar = 5;
+```
+<br>
+
+## 5. What is the _scope_ in JavaScript?
+
+**Scope** defines the accessibility and lifetime of variables in a program. In JavaScript, there are two primary types: **Global Scope** and **Local Scope**.
+
+### Global Scope
+
+Any variable declared **outside of a function** is in the global scope. These can be accessed from both within functions and from other script tags.
+
+#### Example: Global Scope
+
+Here is the JavaScript code:
+
+```javascript
+let globalVar = 'I am global';
+
+function testScope() {
+    console.log(globalVar); // Output: 'I am global'
+}
+
+testScope();
+console.log(globalVar); // Output: 'I am global'
+```
+
+### Local Scope
+
+Variables declared within a **function** (using `let` or `const` or prior to JavaScript ES6 with `var`) have local scope, meaning they are only accessible within that function.
+
+#### Example: Local Scope
+
+Here is the JavaScript code:
+
+```javascript
+function testScope() {
+    let localVar = 'I am local';
+    console.log(localVar); // Output: 'I am local'
+}
+
+// This statement will throw an error because localVar is not defined outside the function scope
+// console.log(localVar);
+```
+
+### Block Scope
+
+Starting from **ES6**, JavaScript also supports block scope, where variables defined inside code blocks (denoted by `{}` such as loops or conditional statements) using `let` or `const` are accessible only within that block.
+
+#### Example: Block Scope
+
+Here is the JavaScript code:
+
+```javascript
+function testScope() {
+    let localVar = 'I am local';
+    if (true) {
+        let blockVar = 'I am local to this block';
+        console.log(localVar, blockVar); // Both will be accessible
+    }
+    // This statement will throw an error because blockVar is not defined outside the block scope
+    // console.log(blockVar);
+}
+
+testScope();
+```
+<br>
+
+## 6. What is the difference between `==` and `===`?
+
+**Strict equality** (`===`) in JavaScript requires both value and type to match, testing for more specific conditions and reducing the likelihood of unexpected results.
+
+In contrast, the **abstract equality** comparison (`==`) can lead to type coercion, potentially causing counterintuitive outcomes.
+
+While both comparison modes test value equality, `===` ensures an additional match of data type.
+
+### Illustrative Example: Abstract vs. Strict Equality
+
+- Abstract Equality: 
+    - `5 == '5'` evaluates to `true` because JavaScript converts the string to a number for comparison.
+- Strict Equality:
+    - `5 === '5'` evaluates to `false` because the types are not the same.
+
+### Key Considerations
+
+- **Type Safety**: `===` is safer as it avoids unwanted type conversions.
+- **Performance**: `===` can be faster, especially for simple comparisons, as it doesn't involve type coercion or additional checks.
+- **Clarity**: Favoring `===` can make your code clearer and more predictable.
+
+### Common Best Practices
+
+- **Use Strict Equality by Default**: This approach minimizes unintended side effects.
+- **Consider Type Coercion Carefully**: In specific cases or with proven understanding, `==` can be suitable, but be cautious about potential confusion.
+
+### Code Example: Equality Operators
+
+Here is the JavaScript code:
+
+```javascript
+// Abstract equality
+console.log('5' == 5);      // true
+console.log(null == undefined);  // true
+console.log(0 == false);    // true
+
+// Strict equality
+console.log('5' === 5);     // false
+console.log(null === undefined); // false
+console.log(0 === false);   // false
+```
+<br>
+
+## 7. Describe _closure_ in JavaScript. Can you give an example?
+
+In JavaScript, **closures** enable a **function** to access its outer scope, retaining this access even after the parent function has finished executing. This mechanism provides a powerful tool for data encapsulation and privacy.
+
+### Core Concept
+
+When a **function** is defined within another function, it maintains a reference to the variables from the outer function, even after the outer function has completed execution and its local variables are typically no longer accessible.
+
+### Key Components
+
+1. **Outer Function (Parent function)**: It contains the inner functions or closures.
+2. **Inner Function (Closure)**: Defined within the parent function, it references variables from the outer function.
+3. **Lexical Environment**: The context where the inner function is defined, encapsulating the scope it has access to.
+
+### Example: Password Generator
+
+Consider a simple scenario of a function in charge of generating a secret password:
+
+1. The outer function, `generatePassword`, defines a local variable, `password` and returns an inner function `getPassword`.
+2. The inner function, `getPassword`, has exclusive access to the `password` variable even after `generatePassword` has executed.
+
+Here is the JavaScript code:
+
+```javascript
+function generatePassword() {
+  let password = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const passwordLength = 8;
+  for(let i = 0; i < passwordLength; i++) {
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+
+  return function getPassword() {
+      return password;
+  };
+}
+
+const getPassword = generatePassword();
+
+console.log(getPassword()); // Outputs the generated password.
+```
+
+In this example, `getPassword` still has access to the `password` variable after the `generatePassword` function has completed, thanks to the closure mechanism.
+
+### Application
+
+- **Data Privacy**: JavaScript design patterns like the Module and Revealing Module Patterns use closures to keep data private.
+
+- **Timeouts and Event Handlers**: Closures help preserve the surrounding context in asynchronous operations such as `setTimeout` and event handlers.
+
+### Pitfalls to Avoid
+
+- **Memory Leakage**: If not used carefully, closures can cause memory leaks, as the outer function's variables continue to live in memory because of the closure link.
+- **Stale Data**: Be mindful of shared variables that might change after a closure has been defined, leading to unexpected behavior.
+
+### Browser Compatibility
+
+The concept of closures is a fundamental aspect of the JavaScript language and is supported by all modern browsers and environments.
+<br>
+
+## 8. What is the '_this_ keyword' and how does its context change?
+
+In JavaScript, the context of **`this`** refers to the execution context, typically an object that owns the function where `this` is used.
+
+### 'this' in the Global Scope
+
+In **non-strict** mode, `this` in the global scope refers to the `window` object. In **strict** mode, `this` is `undefined`.
+
+### 'this' in Functions
+
+In **non-arrow functions**, the value of `this` depends on how the function is **invoked**. When invoked:
+
+- As a method of an object: `this` is the object.
+- Alone: In a browser, `this` is `window` or `global` in Node.js. In strict mode, it's `undefined`.
+- With `call`, `apply`, or `bind`: `this` is explicitly set.
+- As a constructor (with `new`): `this` is the newly created object.
+
+### 'this' in Arrow Functions
+
+Arrow functions have a **fixed context** for `this` defined at **function creation** and are not changed by how they are invoked.
+
+- They do **not have** their own `this`.
+- They use the `this` from their surrounding lexical context (the enclosing function or global context).
+
+### Code Example: Global Context
+
+Here is the JavaScript code:
+
+```javascript
+// Main
+let globalVar = 10;
+
+function globalFunction() {
+    console.log('Global this: ', this.globalVar);
+    console.log('Global this in strict mode: ', this);
+}
+
+globalFunction();  // Output: 10, window or undefined (in strict mode)
+
+// In Node.js, it will be different, because "window" is not defined. But "this" will refer to the global object.
+```
+<br>
+
+## 9. What are _arrow functions_ and how do they differ from regular functions?
+
+Let's look at the key features of **arrow functions** and how they differ from traditional functions in JavaScript.
+
+### Arrow Functions: Key Features
+
+- **Concise Syntax**:
+  - Especially useful for short, one-liner functions.
+  - No need for `function` keyword or **braces** if there's a single expression.  
   
-  <span class="token cComment">// return all numbers and strings</span>
-  <span class="token cVar">return</span> output<span class="token cBase">;</span>
+- **Implicit Return**:
+  - When there's no explicit `{ return ... ;}` statement, arrow functions return the result of the single expression inside.
+
+- **`this` Binding**:
+  - Does not have its **own `this`**. It's "inherited" from the surrounding (lexical) context. This feature is known as '**lexical scoping**'.
+
+### Code Example: Standard Function vs. Arrow Function
+
+Here is the JavaScript code:
+
+```javascript
+// Standard Function
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+// Arrow Function
+const greetArrow = name => "Hello, " + name + "!";
+```
+
+In the code above, `greet` is a standard function, while `greetArrow` is an arrow function, showcasing the difference in syntax and required keywords.
+
+### When to Use Arrow Functions
+
+- **Event Handlers**: Ideal for concise, inline event handling, where `this` context can be inherited from the lexical scope.
+
+- **Callback Functions**: Useful for array methods like `map`, `filter`, and `reduce`.
+
+- **Avoidance of `this` Redefinition**: When you want to maintain the surrounding context of `this` and avoid unintended redefinition.
+
+### Code Example: Arrow Function and `this` Context
+
+Here is the JavaScript code:
+
+```javascript
+// Using traditional functions
+document.getElementById('myButton').onclick = function() {
+  console.log('Button clicked:', this);  // Refers to the button element
+};
+
+// Using arrow functions
+document.getElementById('myButton').onclick = () => {
+  console.log('Button clicked:', this);  // Refers to the global/window object
+};
+```
+
+In the arrow function example, the context of `this` does not refer to the button element, but to the global `window` object, because arrow functions do not have their own binding of `this`. Instead, they inherit `this` from their lexical scope, which in this case is the global context.
+<br>
+
+## 10. What are _template literals_ in JavaScript?
+
+**Template literals** are a feature in modern JavaScript versions that offer a more flexible and readable way to work with strings. They are often referred to as "template strings".
+
+### Key Features
+
+- **Multiline Text**: Template literals support multiline strings without requiring escape characters or string concatenation with a `+` sign.
+- **String Interpolation**: They enable the seamless embedding of JavaScript expressions within strings, using `${}`.
+
+### Syntax
+
+- **Single Versus Double Quotes**: For template literals, use backticks (\`) instead of single quotes ('') or double quotes ("").
+- **Placeholder**: The `${expression}` placeholder within the backticks allows for variable and expression injection.
+
+### Example:
+
+```javascript
+let name = "John";
+let message = `Hi ${name}!`;
+
+console.log(message);  // Output: "Hi John!"
+```
+
+### Benefits
+
+- **Readability**: They can make code more understandable, especially when dealing with longer or complex strings, by keeping content closer to its intention.
+- **Interpolation & Expression**: Template literals reduce verbosity and rendering logic when integrating dynamic data.
+
+### Code Example: Multiline Text and String Interpolation
+
+```javascript
+// Regular String
+let poem = "Roses are red,\nViolets are blue,\nSugar is sweet,\nAnd so are you.";
+
+// Template Literal
+let poemTemplate = `
+  Roses are red,
+  Violets are blue,
+  Sugar is sweet,
+  And so are you.
+`;
+```
+
+### Browser Compatibility Concerns
+
+Template literals are universally supported in modern browsers and are now considered a **core JavaScript feature**. However, they may not work in older browsers such as Internet Explorer without transpilation or polyfilling.
+<br>
+
+## 11. What is a _higher-order function_ in JavaScript?
+
+A **higher-order function** in JavaScript is a function that can take other functions as arguments or can return functions. This feature enables functional programming paradigms such as `map`, `reduce`, and `filter`. Higher-order functions offer versatility and modularity, fostering streamlined, efficient code.
+
+### Key Characteristics
+
+- **First-class functions**: Functions in JavaScript are considered first-class, meaning they are a legitimate data type and can be treated like any other value, including being assigned to variables, stored in data structures, or returned from other functions.
+
+- **Closure support**: Due to closures, a higher-order function can transport not just the enclosed data within the function definition, but also the lexical environment in which that data resides.
+
+- **Dynamic code**: Because JavaScript allows functions to be dynamically constructed and named, they can be dynamically passed to higher-order functions.
+
+### Practical Applications
+
+- **Callback Execution**: Functions like `setTimeout` and `addEventListener` take a function as an argument and are thus higher-order.
+
+- **Event Handling**: Many event-driven systems leverage higher-order functions for tasks such as event subscription and emission.
+
+- **Iterative Operations**: The `map`, `filter`, and `reduce` functions in JavaScript operate on arrays and require functions to be passed, making them higher-order.
+
+- **Code Abstraction**: Higher-order functions enable the encapsulation of repetitive tasks, promoting cleaner, more readable code.
+
+### Code Example: Higher-order Functions
+
+Here is the JavaScript code:
+
+```javascript
+// Simple higher-order function
+function multiplier(factor) {
+  return function(num) {
+    return num * factor;
+  };
+}
+
+// Invoke a higher-order function
+const twice = multiplier(2);
+console.log(twice(5));  // Output: 10
+
+// Functional programming with higher-order functions
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(multiplier(2));  // [2, 4, 6, 8, 10]
+const tripled = numbers.map(multiplier(3));  // [3, 6, 9, 12, 15]
+```
+<br>
+
+## 12. Can functions be assigned as values to variables in JavaScript?
+
+Yes, **JavaScript** supports first-class functions, meaning **functions can be treated as variables** and then assigned to other variables or passed as arguments to other functions.
+
+Functions defined as regular functions or arrow functions are both first-class in JavaScript. 
+
+### Practical Code Example
+
+Here is the JavaScript code:
+
+```javascript
+// Define a function
+function greet() {
+  console.log('Hello!');
+}
+
+// Assign the function to a variable
+let sayHello = greet;
+
+// Call the function through the variable
+sayHello();  // Output: "Hello!"
+
+// Reassign the variable to a new function
+sayHello = function() {
+  console.log('Bonjour!');
+};
+
+// Call it again to see the new behavior
+sayHello();  // Output: "Bonjour!"
+```
+
+### Practical Use Cases
+
+- **Callbacks**: Functions can be passed as parameters to other functions.
   
-<span class="token cBase">}</span>
+- **Event Handling**: In web development, functions define how to respond to specific events, and these functions are often attached to event listeners.
 
-<span class="token cMod">test_divisors</span><span class="token cBase">(</span><span class="token cNum">2</span><span class="token cBase">,</span> <span class="token cNum">10</span><span class="token cBase">)</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://coderbyte.com/algorithm/test-divisors-of-three" rel="noreferrer" target="_blank" title="Test divisors of three Interview Questions Source To Answer">coderbyte.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 26. Oddball sum</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Write a function called <code>oddball_sum</code> which takes in a list of numbers and returns the sum of all the odd elements. Try to solve with and without <code>reduce</code> function.</p></div></div><div><div class="AnswerBody"><p>To solve this challenge we'll simply loop through the array while maintaining a final count, and every time an odd number is encountered we'll add it to the count.</p><p>Without <code>reduce</code>:</p><pre><code><span class="token cVar">function</span> <span class="token cMod">oddball_sum</span><span class="token cBase">(</span><span class="token parameter">nums</span><span class="token cBase">)</span> <span class="token cBase">{</span>
- 
-  <span class="token cComment">// final count of all odd numbers added up</span>
-  <span class="token cVar">var</span> final_count <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  
-  <span class="token cComment">// loop through entire list</span>
-  <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> i <span class="token cBase">&lt;</span> nums<span class="token cBase">.</span>length<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    
-    <span class="token cComment">// we divide by 2, and if there is a remainder then</span>
-    <span class="token cComment">// the number must be odd so we add it to final_count</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>nums<span class="token cBase">[</span>i<span class="token cBase">]</span> <span class="token cBase">%</span> <span class="token cNum">2</span> <span class="token cBase">===</span> <span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-      final_count <span class="token cBase">+=</span> nums<span class="token cBase">[</span>i<span class="token cBase">]</span>
-    <span class="token cBase">}</span>
-    
-  <span class="token cBase">}</span>
-  
-  <span class="token cVar">return</span> final_count<span class="token cBase">;</span>
-  
-<span class="token cBase">}</span>
+- **Modular Development**: In programming patterns like the Module pattern, functions are defined within a scope and then returned, similar to variables.
 
-<span class="token cMod">oddball_sum</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">2</span><span class="token cBase">,</span> <span class="token cNum">3</span><span class="token cBase">,</span> <span class="token cNum">4</span><span class="token cBase">,</span> <span class="token cNum">5</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span> </code></pre><p>With <code>reduce</code>:</p><pre><code><span class="token cVar">function</span> <span class="token cMod">oddball_sum</span><span class="token cBase">(</span><span class="token parameter">nums</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> nums<span class="token cBase">.</span><span class="token cMod">reduce</span><span class="token cBase">(</span><span class="token cVar">function</span><span class="token cBase">(</span><span class="token parameter">total<span class="token cBase">,</span> item</span><span class="token cBase">)</span><span class="token cBase">{</span>
-  	<span class="token cVar">if</span> <span class="token cBase">(</span>item <span class="token cBase">%</span> <span class="token cNum">2</span> <span class="token cBase">===</span> <span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  		<span class="token cVar">return</span> total <span class="token cBase">+=</span> item<span class="token cBase">;</span>
-  	<span class="token cBase">}</span>
-  	<span class="token cVar">return</span> total<span class="token cBase">;</span>
-  <span class="token cBase">}</span><span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="http://prepwork.appacademy.io/coding-test-1/practice-coding-exercise/ " rel="noreferrer" target="_blank" title="Oddball sum Interview Questions Source To Answer">prepwork.appacademy.io</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 27. Sum of Array Plus One</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.</p></div></div><div><div class="AnswerBody"><pre><code><span class="token cComment">// ES5 method is nice and clean</span>
-exports<span class="token cBase">.</span><span class="token function-variable cMod">es5</span> <span class="token cBase">=</span> <span class="token cVar">function</span> <span class="token cBase">(</span><span class="token parameter">array</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> array<span class="token cBase">.</span><span class="token cMod">reduce</span><span class="token cBase">(</span><span class="token cVar">function</span> <span class="token cBase">(</span><span class="token parameter">memo<span class="token cBase">,</span> num</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">return</span> memo <span class="token cBase">+</span> num<span class="token cBase">;</span>
-  <span class="token cBase">}</span><span class="token cBase">,</span> array<span class="token cBase">.</span>length<span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span><span class="token cBase">;</span>
+- **Higher-Order Functions**: These functions operate on other functions, taking them as arguments or returning them, and are an essential part of many modern JavaScript libraries and frameworks.
+<br>
 
-<span class="token cComment">// Without array.reduce method isn't much different</span>
-exports<span class="token cBase">.</span><span class="token function-variable cMod">iterative</span> <span class="token cBase">=</span> <span class="token cVar">function</span> <span class="token cBase">(</span><span class="token parameter">array</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">var</span> result <span class="token cBase">=</span> array<span class="token cBase">.</span>length<span class="token cBase">;</span>
+## 13. How do _functional programming_ concepts apply in JavaScript?
 
-  <span class="token cVar">for</span> <span class="token cBase">(</span><span class="token cVar">var</span> i <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span> i <span class="token cBase">&lt;</span> array<span class="token cBase">.</span>length<span class="token cBase">;</span> i<span class="token cBase">++</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    result <span class="token cBase">+=</span> array<span class="token cBase">[</span>i<span class="token cBase">]</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
+**Functional Programming** (FP) concepts in JavaScript are a direct result of the language's first-class functions. Key FP principles, such as immutability, pure functions, and **declarative** style, play a crucial role.
 
-  <span class="token cVar">return</span> result<span class="token cBase">;</span>
-<span class="token cBase">}</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/blakeembrey/code-problems/tree/master/problems/sum-of-array-plus-one" rel="noreferrer" target="_blank" title="Sum of Array Plus One Interview Questions Source To Answer">github.com/blakeembrey</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 28. String Rotation</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Find out if a string is a rotation of another string. E.g. <code>ABCD</code> is a rotation of <code>BCDA</code> but not <code>ACBD</code>.</p></div></div><div><div class="AnswerBody"><p>First make sure <code>a</code> and <code>b</code> are of the same length. Then check to see if <code>b</code> is a substring of <code>a</code> concatenated with <code>a</code>:</p><pre><code>module<span class="token cBase">.</span><span class="token function-variable cMod">exports</span> <span class="token cBase">=</span> <span class="token cVar">function</span> <span class="token cBase">(</span><span class="token parameter">a<span class="token cBase">,</span> b</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> a<span class="token cBase">.</span>length <span class="token cBase">===</span> b<span class="token cBase">.</span>length <span class="token cBase">&amp;&amp;</span> <span class="token cBase">(</span>a <span class="token cBase">+</span> a<span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">indexOf</span><span class="token cBase">(</span>b<span class="token cBase">)</span> <span class="token cBase">&gt;</span> <span class="token cBase">-</span><span class="token cNum">1</span><span class="token cBase">;</span>
-<span class="token cBase">}</span><span class="token cBase">;</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/blakeembrey/code-problems/tree/master/problems/string-rotation" rel="noreferrer" target="_blank" title="String Rotation Interview Questions Source To Answer">github.com/blakeembrey</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 29. Make this work</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><pre><code><span class="token cMod">duplicate</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">2</span><span class="token cBase">,</span> <span class="token cNum">3</span><span class="token cBase">,</span> <span class="token cNum">4</span><span class="token cBase">,</span> <span class="token cNum">5</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">// [1,2,3,4,5,1,2,3,4,5]</span></code></pre></div></div><div><div class="AnswerBody"><pre><code><span class="token cVar">function</span> <span class="token cMod">duplicate</span><span class="token cBase">(</span><span class="token parameter">arr</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> arr<span class="token cBase">.</span><span class="token cMod">concat</span><span class="token cBase">(</span>arr<span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span>
+### Core Concepts
 
-<span class="token cMod">duplicate</span><span class="token cBase">(</span><span class="token cBase">[</span><span class="token cNum">1</span><span class="token cBase">,</span> <span class="token cNum">2</span><span class="token cBase">,</span> <span class="token cNum">3</span><span class="token cBase">,</span> <span class="token cNum">4</span><span class="token cBase">,</span> <span class="token cNum">5</span><span class="token cBase">]</span><span class="token cBase">)</span><span class="token cBase">;</span> <span class="token cComment">// [1,2,3,4,5,1,2,3,4,5]</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/javascript-questions.md" rel="noreferrer" target="_blank" title="Make this work Interview Questions Source To Answer">github.com/yangshun</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 30. Given a string, reverse each word in the sentence</h2></div> <div><h3>Answer:</h3> <div class="answer"><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>For example <code>Welcome to this Javascript Guide!</code> should be become <code>emocleW ot siht tpircsavaJ !ediuG</code></p></div></div><div><div class="AnswerBody"><pre><code><span class="token cVar">var</span> string <span class="token cBase">=</span> <span class="token cString">"Welcome to this Javascript Guide!"</span><span class="token cBase">;</span>
+#### First-Class Functions and Higher-Order Functions
 
-<span class="token cComment">// Output becomes !ediuG tpircsavaJ siht ot emocleW</span>
-<span class="token cVar">var</span> reverseEntireSentence <span class="token cBase">=</span> <span class="token cMod">reverseBySeparator</span><span class="token cBase">(</span>string<span class="token cBase">,</span> <span class="token cString">""</span><span class="token cBase">)</span><span class="token cBase">;</span>
+JavaScript treats functions as first-class citizens, allowing them to be assigned to variables, passed as parameters, and returned from other functions. This feature is foundational to FP in the language.
 
-<span class="token cComment">// Output becomes emocleW ot siht tpircsavaJ !ediuG</span>
-<span class="token cVar">var</span> reverseEachWord <span class="token cBase">=</span> <span class="token cMod">reverseBySeparator</span><span class="token cBase">(</span>reverseEntireSentence<span class="token cBase">,</span> <span class="token cString">" "</span><span class="token cBase">)</span><span class="token cBase">;</span>
+#### Code Example:
 
-<span class="token cVar">function</span> <span class="token cMod">reverseBySeparator</span><span class="token cBase">(</span><span class="token parameter">string<span class="token cBase">,</span> separator</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">return</span> string<span class="token cBase">.</span><span class="token cMod">split</span><span class="token cBase">(</span>separator<span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">reverse</span><span class="token cBase">(</span><span class="token cBase">)</span><span class="token cBase">.</span><span class="token cMod">join</span><span class="token cBase">(</span>separator<span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://github.com/kennymkchan/interview-questions-in-javascript" rel="noreferrer" target="_blank" title="Given a string, reverse each word in the sentence Interview Questions Source To Answer">https://github.com/kennymkchan</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 31. Implement enqueue and dequeue using only two stacks</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 32. Write a "mul" function which will properly when invoked as below syntax</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 33. Explain what a callback function is and provide a simple example</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 34. How to empty an array in JavaScript?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 35. Find the missing number in O(n) time</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 36. Write a function that would allow you to do this?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 37. Remove duplicates of an array and return an array of only unique elements</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 38. How to check if an object is an array or not? Provide some code.</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 39. How would you check if a number is an integer?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 40. Two sum problem</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 41. Determine overlapping numbers in ranges</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 42. Stock maximum profit</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 43. Tree Level Order Print</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 44. Step-by-step solution for step counting using recursion</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 45. Implement Bubble Sort</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 46. What is IIFEs (Immediately Invoked Function Expressions)?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 47. What is Coercion in JavaScript?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 48. What is the difference between a shim and a polyfill?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 49. What is the definition of a Higher-Order Function?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 50. What do you think of AMD vs CommonJS?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 51. Explain the differences on the usage of foo between function foo() {} and var foo = function() {}</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 52. What is the drawback of creating true private in JavaScript?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 53. What's the difference between .call and .apply?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 54. What is the preferred syntax for defining enums in JavaScript?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 55. Describe Closure concept in JavaScript as best as you could</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 56. Could you explain the difference between ES5 and ES6</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 57. When should we use generators in ES6?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 58. Explain Function.prototype.bind.</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 59. What are the benefits of using spread syntax in ES6 and how is it different from rest syntax?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 60. When should I use Arrow Functions in ES6?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 61. Explain the difference between undefined and not defined in JavaScript</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 62. What are the advantages and disadvantages of using use strict?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 63. What is Currying?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 64. What are the differences between ES6 class and ES5 function constructors?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 65. Why should we use ES6 classes?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 66. Explain the difference between Object.freeze() vs const</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 67. How to compare two objects in JavaScript?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 68. What will be the output of the following code?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 69. What is a closure, and how/why would you use one?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 70. What will be the output of the following code?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 71. What's a typical use case for anonymous functions?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 72. Suggest one simple way of removing duplicates from an array using ES6</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 73. What is generator in JS?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 74. What is the difference between document load event and document DOMContentLoaded event?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 75. What's the difference between using let and var to declare a variable in ES6?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 76. What is the motivation for bringing Symbol to ES6?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 77. Why is extending built-in JavaScript objects not a good idea?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 78. What is the difference between Anonymous and Named functions?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 79. Provide some examples of non-bulean value coercion to a boolean one</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 80. Given an array of integers, find the largest difference between two elements such that the element of lesser value must come before the greater element</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 81. What will the following code output?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 82. Write a function that would allow you to do this</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 83. Given an array of integers, find the largest product yielded from three of the integers</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 84. What will be the output of the following code?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 85. Check if a given string is a palindrome. Case sensitivity should be taken into account.</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 86. Find the intersection of two arrays</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 87. Write a recursive function that returns the binary string of a given decimal number</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 88. How would you use a closure to create a private counter?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 89. FizzBuzz Challenge</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 90. Given two strings, return true if they are anagrams of one another</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 91. All Permutations (Anagrams) of a String</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 92. Find all string combinations consisting only of 0, 1 and ?</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 93. Generate all balanced bracket combinations</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 94. Implement a queue using two stacks</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 95. Throttle Function Implementation</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 96. Find Word Positions in Text</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 97. Merge two sorted linked lists</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 98. Dutch national flag sorting problem</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 99. Insert an interval into a list of sorted disjoint intervals</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div><div data-v-5e9078c0="" class="unit"><div><h2>🔹 100. Implement a queue using a linked list</h2></div> <div>
-    👉🏼 Check
-    <a href="https://devinterview.io/dev/javascript-interview-questions">all 142 answers</a></div> <br><br></div> <div data-v-5e9078c0="" class="end"></div> <br data-v-5e9078c0="">
-    Thanks 🙌 for reading and good luck on your next tech interview!
-    <br data-v-5e9078c0="">
-    Explore 3800+ dev interview question here 👉
-    <a data-v-5e9078c0="" href="https://devinterview.io/">Devinterview.io</a></div>
+Here is the JavaScript code:
+
+```javascript
+const sayHello = () => console.log('Hello!');
+const runFunction = (func) => func();
+
+runFunction(sayHello);  // Output: "Hello!"
+```
+<br>
+
+## 14. What are _IIFEs_ (Immediately Invoked Function Expressions)?
+
+The **Immediately Invoked Function Expression** (IIFE) design pattern employs an anonymous function that gets executed promptly after its definition.
+
+Key characteristics of IIFEs include localized variable scopes and immediate activation upon interpreter parsing.
+
+### Code Example: IIFE
+
+Here is the JavaScript code:
+
+```javascript
+(function(){
+    var foo = 'bar';
+    console.log(foo);
+})();
+```
+
+In this example, the function is enclosed within parentheses, ensuring the enclosed function is evaluated as an expression. Subsequently, it is invoked with a trailing pair of parentheses.
+
+### Core Functions of IIFE
+
+1. **Encapsulation**: Through lexical scoping, IIFEs safeguard variables from leaking into the global scope. This, in turn, averts unintended variable tampering in the global context.
+
+2. **Data Hiding**: Internal functions or data can be hidden from external access, providing a mechanism for information concealment and access control.
+
+3. **Initialization**: The IIFE structure is ideal for setting up initial conditions, like binding events or pre-processing data.
+
+### Use Cases
+
+- **Avoiding Variable Pollution**: When interfacing with libraries or inserting code snippets, IIFEs prevent global scope pollution.
+
+- **Module Patterns**: IIFEs, in combination with **closures**, lay the groundwork for modular code organization by shielding private variables and functions.
+
+### Modern Alternatives
+
+With the introduction of ES6 and its `let` and `const` declarations, as well as block-scoped lexical environments, the necessity of IIFEs has reduced. Additionally, **arrow functions** provide a more concise method for defining immediately invoked functions.
+
+### IIFE Variants
+
+1. **Parentheses Invocation**: A pair of parentheses immediately invoke the enclosed function. While this approach is more extensive, it's devoid of self-documenting advantages.
+    ```javascript
+    (function(){
+        console.log('Invoked!');
+    })();
+    ```
+
+2. **Wrapping in Operators**: Similar to using parentheses for invocation, the `!`, `+`, or `-` operators are sometimes used for invoking clarity. For instance:
+    ```javascript
+    !function(){
+        console.log('Invoked!');
+    }();
+    ```
+
+3. **Named IIFE**: Though not as common, naming an IIFE can assist with self-referencing. This is most effective when the intention is to have a more comprehensive stack trace during debugging.
+    ```javascript
+    (function factorial(n){
+        if (n <= 1) return 1;
+        return n * factorial(n-1);
+    })(5);
+    ```
+
+#### Caution on Minification
+
+When leveraging IIFEs, exercise caution while using minifiers to shrink JavaScript files. Minification might lead to unintended outcomes, altering the previous scope expectations.
+<br>
+
+## 15. How do you create _private variables_ in JavaScript?
+
+In JavaScript, encapsulating private state within an object can be achieved using a **closure**. This ensures the state is local to the object and not directly accessible from outside.
+
+### How Closures Work
+
+A **closure** allows a function to retain access to the **lexical environment** (the set of variable bindings at the point of function declaration) in which it was defined, even when the function is executed outside that lexical environment.
+
+This means that any **inner function**, defined inside another function, has access to the **outer function's variables**, and that access is maintained even after the outer function has finished executing.
+
+For example:
+```javascript
+function outerFunction() {
+    let outerVar = 'I am outer';  // This variable is in the lexical environment of outerFunction
+
+    function innerFunction() {
+        console.log(outerVar);  // Accesses outerVar from the lexical environment of outerFunction
+    }
+
+    return innerFunction;
+}
+
+let myInnerFunction = outerFunction();
+myInnerFunction();  // Logs: "I am outer"
+```
+
+Here, `innerFunction` retains access to `outerVar`.
+
+### Practical Implementation with Constructor Functions and Modules
+
+#### Constructor Functions
+
+When defining a JavaScript **constructor function** with `function` and `new`, closure can be used to associate private state with each instance:
+
+```javascript
+function Gadget() {
+    let secret = 'top secret';
+    this.setSecret = function (value) {
+        secret = value;
+    };
+    this.getSecret = function () {
+        return secret;
+    };
+}
+
+let phone = new Gadget();
+phone.setSecret('new secret');
+console.log(phone.getSecret());  // 'new secret'
+```
+
+In this example, `secret` is private to each `Gadget` instance, thanks to closure.
+
+#### Modules
+
+In modern JavaScript, **module patterns** combined with **immediately-invoked function expressions** (IIFE) are often used for encapsulation and data hiding.
+
+- The **revealing module pattern** enables selective exposure of private members.
+
+- The **IIFE pattern** immediately executes and returns the object to be assigned, effectively creating a module.
+
+Here is the code:
+
+```javascript
+let myModule = (function () {
+    let privateVariable = 'I am private';
+
+    function privateMethod() {
+        console.log('I am a private method');
+    }
+
+    return {
+        publicMethod: function () {
+            console.log('I am a public method');
+        },
+        getPrivateVariable: function () {
+            return privateVariable;
+        }
+    };
+})();
+
+console.log(myModule.getPrivateVariable());  // 'I am private'
+myModule.privateMethod();  // Throws an error because privateMethod is not exposed
+```
+
+In this example, `privateVariable` and `privateMethod` are accessible only within the IIFE's lexical environment, thus making them private.
+
+JavaScript tools like TypeScript and Babel also offer modules such as `module.export`, providing additional options for encapsulation.
+<br>
+
+
+
+#### Explore all 100 answers here 👉 [Devinterview.io - JavaScript](https://devinterview.io/questions/web-and-mobile-development/javascript-interview-questions)
+
+<br>
+
+<a href="https://devinterview.io/questions/web-and-mobile-development/">
+<img src="https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/github-blog-img%2Fweb-and-mobile-development-github-img.jpg?alt=media&token=1b5eeecc-c9fb-49f5-9e03-50cf2e309555" alt="web-and-mobile-development" width="100%">
+</a>
+</p>
+
