@@ -11,7 +11,7 @@
 
 <br>
 
-## 1. What are the _data types_ present in JavaScript?
+## 1. What are the _data types_ in JavaScript?
 
 JavaScript has **primitive** and **composite** data types.
 
