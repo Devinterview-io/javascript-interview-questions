@@ -1,4 +1,4 @@
-# 100 Common JavaScript Interview Questions in 2025
+# 100 Common JavaScript Interview Questions in 2026
 
 <div>
 <p align="center">
